@@ -18,9 +18,17 @@
   content: "";
   top: -2px;
   left: 0;
-  width: 260px;
+  width: 93%;
   height: 4px;
   background-color: $back-color-primary-lighter;
+
+  @media (min-width: $min-width-tablet) {
+    width: 91%;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 93%;
+  }
 }
 
 .slider-no-js__range {

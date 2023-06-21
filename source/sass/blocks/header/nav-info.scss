@@ -19,5 +19,13 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @media (min-width: $min-width-tablet) {
+      right: 20px;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      right: 40px;
+    }
   }
 }

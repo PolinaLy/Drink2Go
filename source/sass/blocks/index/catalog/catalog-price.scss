@@ -76,4 +76,9 @@
 .catalog-price__slider-no-js {
   margin-bottom: 24px;
   margin-top: -13px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 18px;
+    margin-top: -7px;
+  }
 }

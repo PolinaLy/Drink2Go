@@ -1,0 +1,128 @@
+.products__label {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.products__sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-left: auto;
+    margin-bottom: 26px;
+    width: 282px;
+  }
+}
+
+.products__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $min-width-tablet) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-template-columns: 317px 317px 317px;
+  }
+}
+
+.products__item {
+  padding: 40px 20px 20px;
+  margin-bottom: 20px;
+  background-color: $back-color-basic;
+  list-style-type: none;
+  min-height: 420px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 130px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    min-height: 440px;
+    padding: 50px 30px 30px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-height: 460px;
+  }
+
+  a:hover,
+  a:focus-visible,
+  a:active {
+    opacity: 0.8;
+  }
+}
+
+.products__item-title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 24px 0 4px;
+  text-align: start;
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px 0 10px;
+  }
+}
+
+.products__item-text {
+  margin: 0 0 16px;
+  text-align: start;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.products__item-price-and-button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products__item-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.products__item-button {
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  padding-left: 46px;
+  min-height: 36px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto 0;
+    width: 20px;
+    height: 16px;
+    background-image: url("../../../../img/icons/stack.svg#product-cart");
+  }
+}

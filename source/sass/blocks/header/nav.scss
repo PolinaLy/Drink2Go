@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $min-width-tablet) {
+    width: 79.5%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 900px) {
+    width: 71.5%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 67.5%;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 64.85%;
+    justify-content: space-between;
+  }
+}

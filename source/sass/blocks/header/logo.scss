@@ -1,0 +1,48 @@
+.logo {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  min-width: 60px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    min-height: 80px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 316px;
+    justify-content: space-between;
+  }
+}
+
+.footer .logo {
+  min-height: 40px;
+}
+
+.logo img {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $min-width-tablet) {
+    width: 82px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 170px;
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: $min-width-desktop) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

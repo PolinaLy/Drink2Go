@@ -1,0 +1,122 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
+  @media (min-width: $min-width-tablet) {
+    width: 395px;
+  }
+}
+
+.pagination__item {
+  list-style-type: none;
+  background-color: $back-color-basic;
+
+  &--current {
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $color-secondary;
+    }
+
+    .pagination__link {
+      color: $color-basic;
+      font-weight: 600;
+    }
+  }
+}
+
+.pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  border: none;
+  background-color: $back-color-basic;
+
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:disabled {
+    color: $color-secondary;
+
+    span {
+      color: $color-secondary;
+    }
+
+    .pagination__image {
+      fill: $back-color-basic;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    padding: 8px 20px;
+  }
+}
+
+.pagination__button .pagination__image {
+  width: 10px;
+  height: 10px;
+  background-image: url("../../../../img/common/select-arrow.svg");
+  transform: rotate(90deg);
+  fill: $color-primary;
+
+  &--next {
+    transform: rotate(270deg);
+  }
+
+  @media (min-width: $min-width-tablet) {
+    display: none;
+  }
+}
+
+.pagination__button span {
+  font-family: $font-montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  display: none;
+  color: $color-primary;
+
+  @media (min-width: $min-width-tablet) {
+    display: block;
+  }
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 17px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-primary;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:disabled {
+    color: $color-secondary;
+  }
+
+  &:focus-visible,
+  &:hover {
+    background-color: $back-color-primary-lighter;
+  }
+
+  &:active {
+    background-color: $back-color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
+  }
+}

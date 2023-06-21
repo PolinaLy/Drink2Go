@@ -1,0 +1,17 @@
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0);
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(-90deg, $back-color-basic 0, transparent 100%);
+  }
+
+  &:active {
+    background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25), transparent 100%);
+  }
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+  color: $color-grey;
+}

@@ -1,0 +1,93 @@
+.swiper-slide {
+  box-sizing: border-box;
+  background-color: $back-color-flat-white;
+  padding: 20px 20px 40px;
+
+  @media (min-width: $min-width-tablet) {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 0;
+    background: linear-gradient( to bottom,
+    $back-color-flat-white 0%,
+    $back-color-flat-white calc(100% - 188px),
+    $back-color-basic calc(100% - 188px),
+    $back-color-basic 100%);
+  }
+
+  @media (min-width: $min-width-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 714px;
+    padding: 30px 105px 60px;
+    background: $back-color-flat-white;
+  }
+
+  &--lavender {
+    background-color: $back-color-lavender;
+
+    @media (min-width: $min-width-tablet) {
+      background: linear-gradient( to bottom,
+      $back-color-lavender 0%,
+      $back-color-lavender calc(100% - 188px),
+      $back-color-basic calc(100% - 188px),
+      $back-color-basic 100%);
+    }
+
+    @media (min-width: $min-width-desktop) {
+      background: $back-color-lavender;
+    }
+  }
+
+  &--espresso {
+    background-color: $back-color-espresso;
+
+    @media (min-width: $min-width-tablet) {
+      background: linear-gradient( to bottom,
+      $back-color-espresso 0%,
+      $back-color-espresso calc(100% - 188px),
+      $back-color-basic calc(100% - 188px),
+      $back-color-basic 100%);
+    }
+
+    @media (min-width: $min-width-desktop) {
+      background: $back-color-espresso;
+    }
+  }
+}
+
+.swiper-slide__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 300px;
+  align-items: center;
+
+  @media (min-width: $min-width-tablet) {
+    position: relative;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 280px;
+
+    @media (min-width: $min-width-tablet) {
+      width: 476px;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      width: 600px;
+    }
+  }
+}
+
+.swiper-wrapper {
+  @media (min-width: $min-width-desktop) {
+    min-height: 714px;
+  }
+}

@@ -1,0 +1,88 @@
+.filters {
+  @media (min-width: $min-width-tablet) {
+    display: grid;
+    grid-template-columns: 30.63% 30.5% 30.63%;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    display: block;
+    width: 318px;
+  }
+}
+
+.filters__price {
+  margin-bottom: 30px;
+}
+
+.filters__radio {
+  margin-bottom: 34px;
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.filters__country {
+  margin-bottom: 30px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.filters__wrapper-button {
+  @media (min-width: $min-width-tablet) {
+    grid-column: span 3;
+    width: 277px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 100%;
+  }
+}
+
+.filters__button {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    width: 137px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 149px;
+  }
+
+  &--reset {
+    color: $color-primary;
+    background-color: $back-color-basic;
+
+    @media (min-width: $min-width-tablet) {
+      width: 120px;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      width: 149px;
+    }
+
+    &:active,
+    &:disabled,
+    &:focus-visible,
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &:disabled {
+      background-color: $back-color-light-grey;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.advantages {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 50px 20px 28px;
+  text-align: center;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 60px 30px 50px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 40px 70px;
+  }
+}
+
+.advantages__title {
+  margin-bottom: 36px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $min-width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  list-style-type: none;
+  padding: 66px 0 0;
+  margin-bottom: 32px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 52px;
+    height: 56px;
+
+    @media (min-width: $min-width-tablet) {
+      right: auto;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      right: 0;
+    }
+  }
+
+  &--speed::after {
+    background-image: url("../../../img/icons/stack.svg#speed");
+  }
+
+  &--convenience::after {
+    background-image: url("../../../img/icons/stack.svg#convenience");
+  }
+
+  &--cheerfulness::after {
+    background-image: url("../../../img/icons/stack.svg#cheerfulness");
+  }
+
+  &--ecology::after {
+    background-image: url("../../../img/icons/stack.svg#ecology");
+  }
+
+  @media (min-width: $min-width-tablet) {
+    width: 339px;
+    padding: 0 0 0 72px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 318px;
+    padding: 76px 0 0;
+  }
+}
+
+.advantages__item-title {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 4px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $min-width-tablet) and (max-width: calc($min-width-desktop - 1px)) {
+    text-align: start;
+  }
+}
+
+.advantages__item-text {
+  margin: 0;
+
+  @media (min-width: 400px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) and (max-width: calc($min-width-desktop - 1px)) {
+    text-align: start;
+  }
+}

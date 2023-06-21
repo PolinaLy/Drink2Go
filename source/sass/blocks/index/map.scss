@@ -1,0 +1,21 @@
+.map {
+  width: 100vw;
+  min-height: 420px;
+
+  @media (min-width: $min-width-tablet) {
+    min-height: 480px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-height: 540px;
+  }
+}
+
+.map .leaflet-control-container {
+  display: none;
+}
+
+.map__map-no-js img {
+  width: 100vw;
+  height: auto;
+}

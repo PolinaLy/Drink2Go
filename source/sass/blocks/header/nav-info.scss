@@ -1,0 +1,23 @@
+.nav-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $min-width-tablet) {
+    align-self: center;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    width: 262px;
+  }
+
+  &--no-js {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

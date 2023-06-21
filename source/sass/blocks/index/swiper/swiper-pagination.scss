@@ -1,0 +1,25 @@
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: $min-width-desktop) {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  background: $back-color-basic;
+  opacity: 1;
+
+  &:hover {
+    background: $color-primary;
+    opacity: 0.25;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: $color-primary;
+}

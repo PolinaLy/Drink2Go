@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $color-basic;
+
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+:root {
+  --swiper-navigation-size: 20px;
+  --swiper-theme-color: #7859cf;
+}

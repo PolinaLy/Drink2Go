@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 20px;
+  width: 100vw;
+  box-sizing: border-box;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.header__nav--no-js {
+  margin-left: -20px;
+}

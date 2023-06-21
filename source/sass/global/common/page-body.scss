@@ -1,0 +1,12 @@
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  font-family: $font-montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  background-color: $back-color-basic;
+  color: $color-basic;
+}

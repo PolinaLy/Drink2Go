@@ -1,0 +1,19 @@
+.site-list--hide {
+  display: none;
+}
+
+.site-list__item {
+  padding: 0 20px;
+  border-top: $border-basic;
+
+  @media (min-width: $min-width-tablet) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.site-list--no-js {
+  position: relative;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,40 @@
+.company {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-grey;
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 16px;
+    margin: 0 auto;
+  }
+}
+
+.company__text {
+  display: flex;
+  margin: 0;
+}
+
+.company__link {
+  display: flex;
+  margin-left: 3px;
+  color: $color-grey;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $back-color-primary-darker;
+  }
+}
+
+.company__image {
+  width: 12px;
+  height: 16px;
+  margin-left: 4px;
+  stroke: currentColor;
+}

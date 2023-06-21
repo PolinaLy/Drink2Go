@@ -1,0 +1,25 @@
+.common-button {
+  font-family: $font-montserrat;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: $color-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-secondary;
+
+  &:focus-visible,
+  &:hover {
+    background-color: $back-color-primary-lighter;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: $back-color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
+  }
+}

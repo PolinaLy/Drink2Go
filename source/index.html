@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" sizes="32x32" href="./img/common/icon.svg">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
@@ -25,7 +25,7 @@
           Интернет-магазин <br>кофейных напитков
         </span>
       </a>
-      <nav class="header__nav--no-js nav">
+      <nav class="header__nav nav nav--no-js">
         <ul class="nav-info nav-info--no-js">
           <li class="item">
             <a class="item__link" href="#">
@@ -101,7 +101,7 @@
                     <span class="price__old-price">295₽</span>
                     <span class="price__new-price">225₽</span>
                   </span>
-                  <button class="price__button common-button" type="button">Заказать</button>
+                  <a href="#" class="price__button common-button">Заказать</a>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@
                     <span class="price__old-price">285₽</span>
                     <span class="price__new-price">265₽</span>
                   </span>
-                  <button class="price__button common-button" type="button">Заказать</button>
+                  <a  href="#" class="price__button common-button">Заказать</a>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@
                     <span class="price__old-price">395₽</span>
                     <span class="price__new-price">375₽</span>
                   </span>
-                  <button class="price__button common-button" type="button">Заказать</button>
+                  <a  href="#" class="price__button common-button">Заказать</a>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@
           <p class="common-badge">Каталог</p>
           <h2 class="catalog__title common-title">Каталог кофейных напитков</h2>
           <div class="catalog__wrapper">
-            <div class="catalog__filters filters">
+            <form class="catalog__filters filters" action="https://echo.htmlacademy.ru/" method="post">
               <div class="filters__price catalog-price">
                 <h3 class="visually-hidden">Фильтр цены</h3>
                 <label class="catalog-price__label common-filters-title" for="catalog-price-input-min">Цена</label>
@@ -254,7 +254,7 @@
                   <span class="country__input-span"></span>Колумбия
                 </label>
                 <label class="country__label">
-                  <input class="country__input visually-hidden" type="checkbox" id="Costa Rica">
+                  <input class="country__input visually-hidden" type="checkbox" id="Costarica">
                   <span class="country__input-span"></span>Коста-Рика
                 </label>
                 <label class="country__label country__label--disabled">
@@ -264,10 +264,10 @@
               </div>
 
               <div class="filters__wrapper-button">
-                <button class="filters__button common-button" type="button">Применить</button>
+                <button class="filters__button common-button" type="submit">Применить</button>
                 <button class="filters__button filters__button--reset common-button" type="button">Сбросить</button>
               </div>
-            </div>
+            </form>
 
             <div class="catalog__products products">
             <div class="products__sorting">
@@ -292,8 +292,8 @@
               </div>
             </div>
 
+            <h3 class="visually-hidden">Все товары</h3>
             <ul class="products__list">
-              <h3 class="visually-hidden">Все товары</h3>
               <li class="products__item">
                 <a href="#">
                   <picture>
@@ -382,26 +382,27 @@
             </div>
           </div>
 
-          <ul class="catalog__pagination pagination">
-            <button class="pagination__button pagination__button--prev common-button" type="button">
+          <div class="catalog__pagination pagination">
+            <a href="#" class="pagination__button pagination__button--prev common-button">
               <span>Назад</span>
               <svg width="10" height="10" class="pagination__image" aria-label="Назад" focusable="false">
                 <use href="img/icons/stack.svg#select-arrow"></use>
-              </svg></button>
-            <li class="pagination__item" id="1"><a class="pagination__link" href="#">1</a></li>
-            <li class="pagination__item pagination__item--current" id="2"><a class="pagination__link" href="#">2</a></li>
-            <li class="pagination__item" id="3"><a class="pagination__link" href="#">3</a></li>
-            <button class="pagination__button pagination__button--next common-button" type="button">
+              </svg></a>
+            <a class="pagination__item pagination__link" href="#"  id="1" aria-label="Перейти на первую страницу." focusable="false">1</a>
+            <a class="pagination__item pagination__item--current pagination__link" href="#" id="2" aria-label="Перейти на вторую страницу." focusable="false">2</a>
+            <a class="pagination__item pagination__link" href="#"  id="3" aria-label="Перейти на третью страницу." focusable="false">3</a>
+            <a href="#" class="pagination__button pagination__button--next common-button">
               <span>Вперёд</span>
               <svg width="10" height="10" class="pagination__image pagination__image--next" aria-label="Вперёд" focusable="false">
                 <use href="img/icons/stack.svg#select-arrow"></use>
               </svg>
-            </button>
-          </ul>
+            </a>
+          </div>
         </div>
       </section>
 
       <section class="map" id="map">
+        <h3 class="visually-hidden">Карта местонахождения компании.</h3>
         <div class="map__map-no-js">
           <picture>
             <source type="image/webp" media="(min-width:1440px)" srcset="./img/index/map/map-desktop.webp 1x, ./img/index/map/map-desktop@2x.webp 2x" width="1440" height="540">
@@ -447,42 +448,50 @@
       </div>
       <div class="footer__source source">
         <h3 class="visually-hidden">Ссылки на страницы с информацией и контакты интернет-магазина.</h3>
-        <ul class="source__list">
+        <div>
           <h4 class="source__title">Интернет-магазин</h4>
-          <li class="source__item">
-            <a href="#" class="source__link">Каталог</a>
-          </li>
-          <li class="source__item">
-            <a href="#" class="source__link">Доставка</a>
-          </li>
-          <li class="source__item">
-            <a href="#" class="source__link">Способы оплаты</a>
-          </li>
-          <li class="source__item">
-            <a href="#" class="source__link">О нас</a>
-          </li>
-        </ul>
-        <ul class="source__list">
+          <ul class="source__list">
+            <li class="source__item">
+              <a href="#" class="source__link">Каталог</a>
+            </li>
+            <li class="source__item">
+              <a href="#" class="source__link">Доставка</a>
+            </li>
+            <li class="source__item">
+              <a href="#" class="source__link">Способы оплаты</a>
+            </li>
+            <li class="source__item">
+              <a href="#" class="source__link">О нас</a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <h4 class="source__title">Медиа</h4>
-          <li class="source__item">
-            <a href="#" class="source__link">Блог</a>
-          </li>
-          <li class="source__item">
-            <a href="#" class="source__link">Информация для СМИ</a>
-          </li>
-          <li class="source__item">
-            <a href="#" class="source__link">Правовая информация</a>
-          </li>
-        </ul>
-        <ul class="source__list source__list--contacts">
+          <ul class="source__list">
+            <li class="source__item">
+              <a href="#" class="source__link">Блог</a>
+            </li>
+            <li class="source__item">
+              <a href="#" class="source__link">Информация для СМИ</a>
+            </li>
+            <li class="source__item">
+              <a href="#" class="source__link">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <h4 class="source__title source__title--contacts">Контакты</h4>
-          <li class="source__item">
-            <p class="source__text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-          </li>
-          <li class="source__item source__item--tel">
-            <p class="source__text">+7 (999) 999-99-99</p>
-          </li>
-        </ul>
+          <ul class="source__list source__list--contacts">
+            <li class="source__item">
+              <p class="source__text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+            </li>
+            <li class="source__item source__item--tel">
+              <a href="tel:+7999-999-99-99">
+                <p class="source__text">+7 (999) 999-99-99</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer__company company">
         <p class="company__text">Разработано в
@@ -497,7 +506,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <script type="module" src="./js/script.js" defer></script>
-    </script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>

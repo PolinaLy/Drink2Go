@@ -37,6 +37,8 @@
 }
 
 .products__item {
+  display: flex;
+  flex-direction: column;
   padding: 40px 20px 20px;
   margin-bottom: 20px;
   background-color: $back-color-basic;
@@ -99,6 +101,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .products__item-price {
